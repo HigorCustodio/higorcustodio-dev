@@ -1,0 +1,287 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /*Variaveis de Tamanho de Fonte*/
+        --tamanhoFonteMenu:1.6rem;
+        --tamanhoFonteH1:2.6rem;
+        --tamanhoFonteH2:2.6rem;
+        --tamanhoFonteP-SegundoConteudo:1.6rem;
+        --tamanhoFonteAFooter:1.2rem;
+
+    /*Variaveis de largura*/
+    --iconeMenuLargura:3rem;
+
+   /*Variaveis de cores*/
+        /*Cores de fundo*/
+            --corFundoHeader:white;
+            --corFundoBody:rgba(217, 238, 242, 0.35);
+            --corBotaoFecharNav:rgb(21 224 251);
+            --corFundoH1:rgba(0, 189, 249, 0.44);
+            --corFundoSobre:rgba(206, 216, 243, 0.53);
+            --corFundoFooter:white;
+        
+        /*Cores letras*/    
+            --corLetrasMenu:rgb(34, 43, 44);
+            --corH1ConteudoPrincipal:rgba(255, 255, 255, 1);
+            --corH2ConteudoSecundario:rgba(77, 75, 89, 1);
+            --corPConteudoSecundario:black;
+            --corAFooter:black;
+
+    font-size: 62.5%;
+}
+
+body{
+    margin: 0 auto;
+    background-color: var(--corFundoBody);
+}
+/* Formatacao do Header*/
+header{ 
+    margin: 1rem 2rem 0 ;
+    padding: 0 2rem;
+    
+    background-color: var(--corFundoHeader);
+    display: flex;
+    justify-content: space-between;
+    align-items:center; 
+
+    box-shadow: 1px 1px 5px rgba(12, 12, 12, 0.788);
+    border-radius: 20px;
+}
+header a .logo{
+    width: clamp(1.9rem, 2rem + 30vw ,25.1rem);
+    height: fit-content;
+    object-fit: cover;
+}
+header .botoes{
+    display: flex;
+    flex-direction: column;
+
+    margin-right: 3rem;
+}
+header a{
+    font-size: var(--tamanhoFonteMenu);
+    color:var(--corLetrasMenu) ;
+}
+header a:hover{
+    opacity: 0.6;
+    color: rgb(0, 166, 243);
+    text-decoration: none;
+}
+.icone-menu{
+    width: var(--iconeMenuLargura);
+} 
+.botoes{
+    animation: animaMenu 600ms 1 300ms;
+}
+.botaoFechar{
+    width: 3rem;
+    height: 3rem;
+
+    background-color:var(--corBotaoFecharNav);
+    
+    opacity: 0.7;
+    
+    border: none;
+    box-shadow: 1px 2px 5px black;
+    border-radius: 50%;
+
+    margin: 1rem auto;
+}
+header nav .botaoFechar:hover{
+    cursor: pointer;
+    opacity: 0.4;
+}
+.remove{
+opacity: 0;
+}
+
+/*Formatacao do Main*/
+main{
+    margin: 3rem auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Formatacao da Primeira section*/
+main .primeiro-conteudo{
+    justify-items: center;
+    display: grid;
+    justify-content: center;
+}
+main .primeiro-conteudo h1{
+    width: 25.9rem ;
+
+    padding: 4rem 1.5rem ;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.555);
+    border-radius: 40px;
+    background-color: var(--corFundoH1);
+    color: var(--corH1ConteudoPrincipal);
+    font-size: var(--tamanhoFonteH1);
+    margin-bottom: 4rem;
+} 
+main .linhaDecorativa1{
+    display: none;
+}   
+main .primeiro-conteudo img{
+    width: clamp(25rem, 2rem + 30vw ,32rem);
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 5rem;
+}
+
+/*Formatacao da Segunda section*/
+main .segundo-conteudo .texto-segundo-conteudo{
+    max-width: 38.5rem ;
+    margin: 0 4rem;
+    padding: 4.4rem 3rem 5rem;
+
+    background-color: var(--corFundoSobre);
+    border-radius: 40px;
+}
+main .segundo-conteudo h2{
+    color: var(--corH2ConteudoSecundario);
+    font-size: var(--tamanhoFonteH2);
+    margin-bottom: 4.1rem;
+}
+main .segundo-conteudo p{
+    max-width: 32.2rem;
+    font-size: var(--tamanhoFonteP-SegundoConteudo);
+    color: var(--corPConteudoSecundario);
+    text-align: justify;
+}
+main .linhaDecorativa{
+    margin: 8rem auto;
+}
+
+/*Formatacao do Footer*/
+footer{
+    width: 100vw;
+    background-color:var(--corFundoFooter) ;
+    border-top: 1px solid  rgba(0, 0, 0, 0.178);
+
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding:0 15px 15px 0 ;
+    gap: 5px;
+}
+footer .logoFooter{
+    width: clamp(18rem, 3rem + 40vw , 21rem);
+    margin: 3.5rem 1.4rem 2.8rem 2.2rem;
+}
+footer section{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+footer section a{
+    margin:3.5rem 1rem 0 0;
+    font-size: var(--tamanhoFonteAFooter);
+    color: var(--corAFooter);
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 5px;
+}
+footer section :nth-child(3){
+    margin-left: 5px;
+}
+footer section a:hover{
+    opacity: 0.6;
+    color: rgb(0, 166, 243);
+    text-decoration: none;
+}
+/* Animacao do menu ao abrir*/
+@keyframes animaMenu {
+    0%{
+        opacity: 0.2;
+        transform: translate3d(0px);
+    }
+   
+    100%{
+        opacity: 1;
+        transform: translateY(-10px)
+    }
+}
+@media (min-width:965px) {
+    /*Estilizando a página para desktop utilizando a media query*/
+    
+    /*Estilizando o header*/
+    header{ 
+        margin: 1rem 2rem 0 ;
+        padding: 0 4rem;
+    }    
+    header a{
+        font-size: 2rem;
+    } 
+  
+      /*Estilizando o main*/
+    main{
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 5rem;
+
+        margin: 5rem 5rem;
+    }
+    main .primeiro-conteudo{
+        align-items: center;
+    }
+    main .primeiro-conteudo h1{
+        width: 35rem;
+        height: 18rem;
+        
+        font-size: clamp(2.6rem , 0.2rem + 10vw , 3.2rem);
+        padding: 5rem 3rem;
+    }
+    main .linhaDecorativa1{
+        display: flex;
+        max-height: 50rem;
+    }
+    main .linhaDecorativa{
+        display: none;
+    }
+    main .segundo-conteudo{
+        margin-left: 0;
+        max-width:58rem ;
+    }
+    main .segundo-conteudo .texto-segundo-conteudo{
+        max-width:clamp(26rem, 5rem + 30vw ,66rem);
+        margin: 0;
+    }
+    main .segundo-conteudo p{
+        max-width: 60.2rem;
+        max-height: 32rem;
+        font-size: var(--tamanhoFonteP-SegundoConteudo);
+    }
+
+     /*Estilizando o footer*/
+    footer{
+        justify-content: space-around;
+        align-items: center;
+    } 
+    footer .logoFooter{
+        max-width: 20rem;
+    }
+    footer section{
+        flex-direction: row;
+        gap: 4rem;
+        align-items: center;
+    }
+    footer section p{
+        font-size:clamp( 1.2rem, 0.1rem + 1vw ,1.6rem);
+    }
+    footer section img{
+     width: 3rem;   
+    }
+    footer section :nth-child(3) img{
+        margin-top: -6px;
+    }
+}

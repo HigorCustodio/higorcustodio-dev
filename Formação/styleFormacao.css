@@ -1,0 +1,350 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /*Variaveis de Tamanho de Fonte*/
+        --tamanhoFonteMenu:1.6rem;
+        --tamanhoFonteH1:2.6rem;
+        --tamanhoFonteH2:2.6rem;
+        --tamanhoFonteP-Certificados: clamp(1.5rem, 0.1rem + 3vw ,2.2rem);
+        --tamanhoFonteAFooter:1.2rem;
+
+    /*Variaveis de largura*/
+    --iconeMenuLargura:3rem;
+    /*Font Family*/
+    --FontFamilyPrimeiroConteudoP:sans-serif;
+   /*Variaveis de cores*/
+        /*Cores de fundo*/
+            --corFundoHeader:white;
+            --corFundoBody:rgba(217, 238, 242, 0.35);
+            --corBotaoFecharNav:rgb(21 224 251);
+            --corFundoH1:rgb(255, 255, 255);
+            --corFundoStatus:rgba(206, 220, 255, 0.53);
+            --corFundoFooter:white;
+            --corFundoIcons:white;
+        
+        /*Cores letras*/    
+            --corLetrasMenu:rgb(34, 43, 44);
+            --corH1ConteudoPrincipal:rgba(255, 255, 255, 1);
+            --corH2ConteudoSecundario:rgba(77, 75, 89, 1);
+            --corPConteudoSecundario:black;
+            --corAFooter:black;
+
+    font-size: 62.5%;
+}
+
+body{
+    margin: 0 auto;
+    background-color: var(--corFundoBody);
+}
+/* Formatacao do Header*/
+header{ 
+    margin: 1rem 2rem 0 ;
+    padding: 0 2rem;
+    
+    background-color: var(--corFundoHeader);
+    display: flex;
+    justify-content: space-between;
+    align-items:center; 
+
+    box-shadow: 1px 1px 5px rgba(12, 12, 12, 0.788);
+    border-radius: 20px;
+}
+header a .logo{
+    width: clamp(1.9rem, 2rem + 30vw ,25.1rem);
+    height: fit-content;
+    object-fit: cover;
+}
+header .botoes{
+    display: flex;
+    flex-direction: column;
+
+    margin-right: 3rem;
+}
+header a{
+    font-size: var(--tamanhoFonteMenu);
+    color:var(--corLetrasMenu) ;
+}
+header a:hover{
+    opacity: 0.6;
+    color: rgb(0, 166, 243);
+    text-decoration: none;
+}
+.icone-menu{
+    width: var(--iconeMenuLargura);
+} 
+.botoes{
+    animation: animaMenu 600ms 1 300ms;
+}
+.botaoFechar{
+    width: 3rem;
+    height: 3rem;
+
+    background-color:var(--corBotaoFecharNav);
+    
+    opacity: 0.7;
+    
+    border: none;
+    box-shadow: 1px 2px 5px black;
+    border-radius: 50%;
+
+    margin: 1rem auto;
+}
+header nav .botaoFechar:hover{
+    cursor: pointer;
+    opacity: 0.4;
+}
+.remove{
+opacity: 0;
+}
+/*Formatacao do Main*/
+h1{
+    max-width: 33rem ;
+    height: 6rem;
+
+    margin: 2rem auto;
+    padding: 1.5rem 2rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+    font-size: var(--tamanhoFonteH1);
+    background-color: var(--corFundoH1);
+}
+/*Formatacao do primeiro conteudo*/
+main{
+    max-width:86rem;
+    margin: 4rem auto;
+    
+
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+main .primeiro-conteudo{
+    margin: 3rem auto 0;
+
+    display: grid;
+    justify-items: center;
+}
+main .primeiro-conteudo .certificados-img{
+    margin-bottom: 5rem;
+    
+
+    width: clamp(19.8rem, 0.5rem + 20vw, 22rem);
+    height: fit-content;
+    object-fit: contain;
+    background-color: var(--corFundoIcons);
+    border-radius: 90px;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.25);
+}
+main .primeiro-conteudo .certificados-status{
+    width: clamp(30rem, 5rem + 30vw, 52rem);
+    height: fit-content;
+
+    border-radius: 40px;
+    box-shadow: 1px 4px 6px rgba(2, 2, 2, 0.8);
+
+    padding: 2.5rem 4rem;
+    margin-bottom: 5rem;
+
+    background-color: white;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    
+    animation: animaCertificadoStatus 1900ms 1 500ms;
+}
+main .certificados-items{
+    background-color: var(--corFundoStatus);
+    
+    border-radius: 20px;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 2rem;
+
+}
+main .primeiro-conteudo p {
+    font-size: var(--tamanhoFonteP-Certificados); 
+    font-family: var(--FontFamilyPrimeiroConteudoP); 
+    font-weight: 600;
+}
+
+/*Formatacao do segundo conteudo*/
+main .segundo-conteudo {
+    display: grid;
+    justify-items: center;
+    margin-top: 4rem;
+    padding: 0 4rem;
+}
+main .segundo-conteudo .segundo-conteudo-icon-logo{
+    margin-bottom: 5rem;
+    background-color: var(--corFundoIcons);
+    width: clamp(19.8rem, 0.5rem + 20vw, 22rem);
+    height: fit-content;
+    object-fit: contain;
+
+    border-radius: 90px;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.25);
+}
+main .segundo-conteudo .segundo-conteudo-icons{
+    display: grid;
+    grid-template-areas: 'html css' 'js bs';
+    gap: 3rem;
+}
+main .segundo-conteudo .segundo-conteudo-icons .icon-html, .icon-css, .icon-js, .icon-bs{
+    width: clamp(15rem, 1rem + 30vw, 19.5rem);
+}
+main .segundo-conteudo .segundo-conteudo-icons .icon-html{
+    grid-area: html;
+}
+main .segundo-conteudo .segundo-conteudo-icons .icon-css{
+    grid-area: css;
+}
+main .segundo-conteudo .segundo-conteudo-icons .icon-js{
+    grid-area: js;
+}
+main .segundo-conteudo .segundo-conteudo-icons .icon-bs{
+    grid-area: bs;
+}
+main .linhaDecorativa2{
+    display: none;
+} 
+/*Formatacao do Footer*/
+footer{
+    width: 100vw;
+    background-color:var(--corFundoFooter) ;
+    border-top: 1px solid  rgba(0, 0, 0, 0.178);
+
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding:0 15px 15px 0 ;
+    gap: 5px;
+}
+footer .logoFooter{
+    width: clamp(18rem, 3rem + 40vw , 21rem);
+    margin: 3.5rem 1.4rem 2.8rem 2.2rem;
+}
+footer section{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+footer section a{
+    margin:3.5rem 1rem 0 0;
+    font-size: var(--tamanhoFonteAFooter);
+    color: var(--corAFooter);
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 5px;
+}
+footer section :nth-child(3){
+    margin-left: 5px;
+}
+footer section a:hover{
+    opacity: 0.6;
+    color: rgb(0, 166, 243);
+    text-decoration: none;
+}
+/* Animacao do menu ao abrir*/
+@keyframes animaMenu {
+    0%{
+        opacity: 0.2;
+        transform: translate3d(0px);
+    }
+   
+    100%{
+        opacity: 1;
+        transform: translateY(-10px)
+    }
+}
+@keyframes animaCertificadoStatus{
+    0%{
+        opacity: 0.0;
+        transform: translateX(150px);
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+/*adicionando Media Query*/
+@media (min-width:965px) {
+    /*Estilizando a página para desktop utilizando a media query*/
+    
+    /*Estilizando o header*/
+    header{ 
+        margin: 1rem 2rem 0 ;
+        padding: 0 4rem;
+    }    
+    header a{
+        font-size: 2rem;
+    } 
+    
+    /*Estilizando o main*/
+    h1{
+        font-size: clamp(2.6rem, 5px + 2vw, 3.4rem);
+        max-width: clamp(30rem, 1.3rem + 39vw, 55rem);
+        height: 9rem;
+        text-align: center;
+        padding: 2.5rem 1rem 3.5rem;
+    }
+    main{
+        max-width: 128rem;
+        flex-direction: row;
+        justify-content: space-between;
+        
+        padding: 0 5rem;
+    }
+    main .primeiro-conteudo{
+        margin: 2rem 0 0 0 ;
+    }
+    main .segundo-conteudo{
+        margin-top: 0;
+        padding: 0;
+    }
+    main .linhaDecorativa1{
+        display: none;
+    } 
+    main .linhaDecorativa2{
+        display: inline-block;
+        margin:0 5rem;
+    }
+    /*Estilizando o footer*/
+    footer{
+        justify-content: space-around;
+        align-items: center;
+    } 
+    footer .logoFooter{
+        max-width: 20rem;
+    }
+    footer section{
+        flex-direction: row;
+        gap: 4rem;
+        align-items: center;
+    }
+    footer section p{
+        font-size:clamp( 1.2rem, 0.1rem + 1vw ,1.6rem);
+    }
+    footer section img{
+     width: 3rem;   
+    }
+    footer section :nth-child(3) img{
+        margin-top: -6px;
+    }
+}
