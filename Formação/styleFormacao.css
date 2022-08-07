@@ -133,14 +133,12 @@ main .primeiro-conteudo{
 }
 main .primeiro-conteudo .certificados-img{
     margin-bottom: 5rem;
-    
 
     width: clamp(19.8rem, 0.5rem + 20vw, 22rem);
     height: fit-content;
     object-fit: contain;
-    background-color: var(--corFundoIcons);
     border-radius: 90px;
-    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.25);
+    
 }
 main .primeiro-conteudo .certificados-status{
     width: clamp(30rem, 5rem + 30vw, 52rem);
@@ -148,7 +146,7 @@ main .primeiro-conteudo .certificados-status{
 
     border-radius: 40px;
     box-shadow: 1px 4px 6px rgba(2, 2, 2, 0.8);
-
+    background-color: var(--corFundoH1); 
     padding: 2.5rem 4rem;
     margin-bottom: 5rem;
    
