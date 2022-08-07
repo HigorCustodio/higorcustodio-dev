@@ -151,8 +151,7 @@ main .primeiro-conteudo .certificados-status{
 
     padding: 2.5rem 4rem;
     margin-bottom: 5rem;
-
-    background-color: white;
+   
     
     display: flex;
     flex-direction: column;
@@ -187,7 +186,7 @@ main .segundo-conteudo {
 }
 main .segundo-conteudo .segundo-conteudo-icon-logo{
     margin-bottom: 5rem;
-    background-color: var(--corFundoIcons);
+    
     width: clamp(19.8rem, 0.5rem + 20vw, 22rem);
     height: fit-content;
     object-fit: contain;
