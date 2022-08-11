@@ -1,7 +1,7 @@
-                Portifolio Pessoal - Higor Custodio
+                Portfolio Pessoal - Higor Custodio
             
              
-            - Portifolio construido para desmonstração de habilidades em desenvolvimento Front End;
+            - Portfolio construido para desmonstração de habilidades em desenvolvimento Front End;
            
            
             - Tecnologias Utilizadas:
